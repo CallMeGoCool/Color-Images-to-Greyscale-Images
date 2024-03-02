@@ -25,10 +25,12 @@ e.g: sRBG Standard uses; G_V= 0.299*R + 0.587*G + 0.114*B
 '''
 
 inp_img = imread("insert_image_address")
-#sometimes there may be an error, and will consider '\' as an escape line. In that case, replace '\' with '\\'.
-#This will resolve the error
-#e.g: inp_img = imread(r"C:\Users\Gokul\Dropbox\My PC (Titan)\Desktop\Random Stuff\Naruto 2.jpeg")          -> may cause error
-#e.g: inp_img = imread("C:\\Users\\Gokul\\Dropbox\\My PC (Titan)\\Desktop\\Random Stuff\\Naruto 2.jpeg")    -> resolves error
+'''
+sometimes there may be an error, and will consider '\' as an escape line. In that case, replace '\' with '\\'.
+This will resolve the error
+e.g: inp_img = imread(r"C:\Users\Gokul\Dropbox\My PC (Titan)\Desktop\Random Stuff\Naruto 2.jpeg")          -> may cause error
+e.g: inp_img = imread("C:\\Users\\Gokul\\Dropbox\\My PC (Titan)\\Desktop\\Random Stuff\\Naruto 2.jpeg")    -> resolves error
+'''
 
 #to sepeate channels of input image into 3 parts
 r,g,b=inp_img[:,:,0],inp_img[:,:,1],inp_img[:,:,2]
